@@ -10,19 +10,6 @@ struct HeaderScrollViewTitle: View {
         let largeTitleOpacity = (max(largeTitle, 0.5) - 0.5) * 2
         let tinyTitleOpacity = 1 - min(largeTitle, 0.5) * 2
         return ZStack {
-            HStack {
-                Text(title)
-                    .font(.largeTitle)
-                    .foregroundColor(titleColor)
-                    .fontWeight(.black)
-                    .padding(.horizontal, 16)
-
-                Spacer()
-            }
-            .padding(.bottom, 8)
-            .opacity(sqrt(largeTitleOpacity))
-            .minimumScaleFactor(0.5)
-
             ZStack {
                 HStack {
                     BackButton(color: .primary)
